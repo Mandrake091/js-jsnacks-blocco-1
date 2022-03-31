@@ -16,9 +16,9 @@ function getInputValue() {
     for (let i = 0; !checkName && i < listaInvitati.length; i++) {
 
         if (input.value == listaInvitati[i]) {
-            checkName = true;
-            h1.innerText = ("Benvenutæ: " + input.value+'!' + " Sei pronto a fare festa?");
            
+            h1.innerText = ("Benvenutæ: " + input.value+'!' + " Sei pronto a fare festa?");
+            checkName = true;
         } else {
             h1.innerText = ("Ciao " + input.value + ", il tuo nome non è sulla lista");
            
