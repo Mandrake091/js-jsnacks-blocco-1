@@ -16,7 +16,7 @@ function getInputValue() {
         if (numero % 2 == 1) {
             numeriDispari.push(numero);
             console.log(numeriDispari)
-            h1.innerText = ("Questi sono i tuoi numeri dispari inseriti " + numeriDispari[1] + ', ' + numeriDispari[2] + ', ' + numeriDispari[3] + ', ' + numeriDispari[4] + ', ' + numeriDispari[5] + ', ' + numeriDispari[6] + '!');
+            h1.innerText = ("Questi sono i tuoi numeri dispari inseriti " + numeriDispari);
             checkName = true;
         } else {
             console.log('Il numero è pari')
@@ -25,3 +25,4 @@ function getInputValue() {
     }
 }
 console.log(input.value, numeriDispari);
+

@@ -20,11 +20,17 @@ while (numbers == false) {
             results += parseInt(numberArray[i]);
             i++;
         }
-        h1.innerText=(`La somma delle cifre inserite è ${results}`)
+        h1.innerText=(`La somma delle cifre inserite è ${results}`);
     }
-}
-}
+}}
 
-
-
+input.addEventListener("keyup", function(event) {
+   
+    if (event.keyCode === 13) {
+     
+      event.preventDefault();
+  
+      button = document.getElementById("button").click();
+    }
+})
 

@@ -20,9 +20,16 @@ function getInputValue() {
             h1.innerText = ("Benvenutæ: " + input.value+'!' + " Sei pronto a fare festa?");
             checkName = true;
         } else {
-            h1.innerText = ("Ciao " + input.value + ", il tuo nome non è sulla lista");
+            h1.innerText = ("Ciao " + input.value + ", il tuo nome non è sulla lista. Guarda in console!");
            
         }
          
     }
 }
+
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      button = document.getElementById("button").click();
+    }
+});
