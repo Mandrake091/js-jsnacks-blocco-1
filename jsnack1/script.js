@@ -1,35 +1,53 @@
-const listaInvitati = ["Paolo", "Marco", "Boolean", "Giacomo"];
+let listaInvitati = ["Paolo", "Marco", "Boolean", "Giacomo", "Deloitte", "Accenture", "CapGemini"];
 
-buttonFesta = document.getElementById("button").addEventListener("click", getInputValue);
+let buttonFesta = document.getElementById("button").addEventListener("click", getInputValue);
 
 let input = document.getElementById('input');
 
 let h1 = document.getElementById('result');
 
-let index = 0;
-let checkName = false;
+
+
 
 console.log(input.value, listaInvitati);
 
+//  function getInputValue() {
+//      let checkName = false;
+//      for (let i = 0; i < listaInvitati.length; i++) {
+//          if (input.value === listaInvitati[i]) {
+//              checkName = true;
+//          }
+//      }
+
+//      if (checkName) {
+//          h1.innerText = ("Benvenutæ: " + input.value + '!' + " Sei pronto a fare festa?");
+
+//      } else {
+//          h1.innerText = ("Benvenutæ: " + input.value + '!' + " Non sei tra gli invitati. Guarda in console.");
+//      }
+//  }
+
 function getInputValue() {
+    let index = 0;
+    let checkName = false;
 
-    for (let i = 0; !checkName && i < listaInvitati.length; i++) {
-
-        if (input.value == listaInvitati[i]) {
-           
-            h1.innerText = ("Benvenutæ: " + input.value+'!' + " Sei pronto a fare festa?");
+    while (!checkName && index < listaInvitati.length) {
+        if (input.value == listaInvitati[index]) {
             checkName = true;
-        } else {
-            h1.innerText = ("Ciao " + input.value + ", il tuo nome non è sulla lista. Guarda in console!");
-           
+            h1.innerText = ("Benvenutæ: " + input.value + '!' + " Sei pronto a fare festa?");
         }
-         
+        index++
+    }if(!checkName){
+        h1.innerText = ("Benvenutæ: " + input.value + '!' + " Non sei sulla lista");
+
     }
 }
 
-input.addEventListener("keyup", function(event) {
+
+
+input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
-      event.preventDefault();
-      button = document.getElementById("button").click();
+        event.preventDefault();
+        buttonFesta = document.getElementById("button").click();
     }
 });
